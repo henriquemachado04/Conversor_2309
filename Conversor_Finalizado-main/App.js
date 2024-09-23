@@ -6,7 +6,6 @@ import { View, TouchableOpacity, StyleSheet, Text, Image, TextInput } from 'reac
 import { Header } from './components/Header';
 import { Dropdown } from 'react-native-element-dropdown';
 
-// Contexto para o histórico de conversões
 const HistoricoContext = createContext();
 
 const data = [
@@ -78,7 +77,6 @@ function ConversorTela({ navigation }) {
         setValorConvertido(valorConvertido.toFixed(2));
         console.log(`Valor convertido: ${valorConvertido.toFixed(2)}`);
 
-        // Adicionar a conversão ao histórico
         const novaConversao = {
           moedaOrigem,
           moedaDestino,
@@ -208,7 +206,7 @@ const styles = StyleSheet.create({
   tableCell: {
     color: '#101f54',
     fontSize: 18,
-    width: '30%', // Define a largura de cada célula
+    width: '30%', 
   },
   background: {
     backgroundColor: '#101f54',
